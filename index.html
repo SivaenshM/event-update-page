@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" type="image/png" href="https://www.google.com/s2/favicons?domain=css-tricks.com">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.2/css/all.min.css">
+    <link rel="stylesheet" href="style.css">
+    <title>event-update-page</title>
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>Event 1</h1>
+            <h3>Number of available seats: 23</h3>
+        </header>
+        <div class="wrapper">
+            <div class="img">
+                <img src="image.svg" alt="image icon" width="512px" height="512px">
+            </div>
+            <div class="field">
+                <form action="" class="field">
+                    <div class="el">
+                        <label for="name">Name:</label><input type="text" id="name" name="name" placeholder="Enter your name"><br>
+                    </div>
+                    <div class="el">
+                        <label for="email">Email:</label><input type="email" id="email" name="email" placeholder="abc@gmail.com"><br>
+                    </div>
+                    <div class="el">
+                        <label for="phone">Phone No:</label><input type="tel" id="phone" name="phone"><br>
+                    </div>
+                    <div class="el">
+                        <label for="seats">Number of seats:</label><input type="number" id="seats" name="seats" value="0" onclick="buttonClick()"><br>
+                    </div>
+                    <div class="el">
+                        <label for="attendee">Name of Attendee2:</label><input type="text" id="attendee" name="attendee"><br>
+                    </div>
+                    <div class="el">
+                        <input type="submit" name="Submit">
+                        <input type="button" value="Cancel">
+                    </div>
+
+                </form>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        function buttonClick() {
+            if(document.getElementById('seats').value <0){
+                document.getElementById('seats').value =0;
+            }
+            
+        }
+    </script>
+</body>
+</html>
